@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+
+:root {
+    --corDeFundo: #fdfdfd;
+    --corDaFonte: #F5FCCD;
+    --corDeFundoMenu: #419197;
+    --corBotaoMenu:#78D6C6;
+    --corSombreamentoMenu: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type:none;
+    text-decoration: none;
+}
+
+html {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.corpo {
+    background-color: var(--corDeFundo);
+    color: var(--corDaFonte);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+}
+
+.caixa__checkbox__label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px; 
+}
+
+.caixa__checkbox__label::after, 
+.caixa__checkbox__label::before, 
+.caixa__checkbox__label > .botao_menu {
+    content:"";
+    width: 24px;
+    height: 3px;
+    background-color: var(--corBotaoMenu);
+    z-index: 1;
+    transition: 1s;
+}
+
+#caixa__checkbox:checked ~ .caixa__checkbox__label::after{
+    background-color: var(--corBotaoMenu);
+    transform: rotate(45deg);
+    transition: 1s;
+    width: 24px;
+    transform: translateY(-8px) rotate(45deg);
+}
+
+#caixa__checkbox:checked ~ .caixa__checkbox__label::before {
+    background-color: var(--corBotaoMenu);
+    transform: translateY(8px) rotate(-45deg);
+    transition: 1s;
+    width: 24px;
+    
+}
+#caixa__checkbox:checked ~ .caixa__checkbox__label > span{
+    opacity: 0;
+}
+
+#caixa__checkbox{
+    display: none;
+    
+}
+
+.lista__hamburguer {
+    background-color: var(--corDeFundoMenu);
+    box-shadow: var(--corSombreamentoMenu);
+    height: 90vh;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    padding: 20% 10% 0 10%;
+    z-index: -1;
+    transition: 1s;
+}
+
+#caixa__checkbox:checked ~ .lista__hamburguer {
+    position: absolute;
+    left: 0;
+    transition: 1s;
+    
+}
+
+.navbar__logo {
+    height: 45px;
+    width: 45px;
+}
+
