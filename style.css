@@ -3,18 +3,19 @@
 :root {
     --corDeFundo: #fdfdfd;
     --corDaFonte: #F5FCCD;
+    --corDaFonteHover: #78D6C6;
     --corDeFundoMenu: #419197;
-    --corBotaoMenu:#78D6C6;
+    --corBotaoMenu:#ffffff;
     --corSombreamentoMenu: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    --corPretaTransparente: #00000085;
 }
 
 
 * {
     margin: 0;
     padding: 0;
-    list-style-type:none;
-    text-decoration: none;
 }
+
 
 html {
     font-size: 14px;
@@ -22,14 +23,22 @@ html {
 }
 
 .corpo {
-    background-color: var(--corDeFundo);
-    color: var(--corDaFonte);
+    background-color: var(--corDeFundo);   
 }
+
+.cabecalho{
+    background-image: url("assets/1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 1s;
+}
+
 
 .navbar {
     display: flex;
     justify-content: space-between;
     padding: 0.5em;
+    background-color: var(--corPretaTransparente);
 }
 
 .caixa__checkbox__label {
@@ -46,7 +55,7 @@ html {
     width: 24px;
     height: 3px;
     background-color: var(--corBotaoMenu);
-    z-index: 1;
+    z-index: 11;
     transition: 1s;
 }
 
@@ -71,27 +80,46 @@ html {
 
 #caixa__checkbox{
     display: none;
-    
 }
 
 .lista__hamburguer {
     background-color: var(--corDeFundoMenu);
     box-shadow: var(--corSombreamentoMenu);
+    list-style-type: none;
     height: 90vh;
     font-size: 2rem;
     position: absolute;
     top: 0;
     left: -100%;
-    padding: 20% 10% 0 10%;
-    z-index: -1;
+    padding-top: 100px;
+    z-index: 10;
     transition: 1s;
+}
+
+.lista__hamburguer > li {
+    width: 260px;
+    text-align: center;
+    padding: 20px 0 20px 0; 
+}
+
+.lista__hamburguer > li:hover {
+    background-color: var(--corDaFonteHover);
+}
+
+.lista__hamburguer > li > a {
+    width: 100%;
+    text-decoration: none;
+    color: var(--corDaFonte);
+}
+
+.lista__hamburguer > li > a:hover {
+    text-decoration: none; 
 }
 
 #caixa__checkbox:checked ~ .lista__hamburguer {
     position: absolute;
     left: 0;
-    transition: 1s;
-    
+    transition: 1s;  
 }
 
 .navbar__logo {
@@ -99,3 +127,66 @@ html {
     width: 45px;
 }
 
+.cabecalho__baixo > span  {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    color: var(--corDaFonte);
+    padding: 30% 0 30% 0;
+    text-align: center;
+}
+
+.principal__cima > p  {
+    color: var(--corDaFonte);
+    text-align: center;
+}
+
+
+.principal {
+    padding: 2rem;
+}
+
+.principal > h1, .principal > h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.principal > p {
+    text-align: left;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+}
+
+.principal__dicas {
+    display: flex;
+    margin-bottom: 4rem;
+}
+
+.principal__dicas > ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.principal__dicas > ul > li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.principal__dicas > ul > li > a > img {
+    width: 6rem;
+    padding: 2rem 0 1.1rem 0;
+}
+
+.principal__dicas > ul > li > a {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
