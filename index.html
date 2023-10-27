@@ -16,8 +16,8 @@
             </label> 
             <img src="assets/logoSite.png" class="navbar__logo">
             <ul class="lista__hamburguer">
-                <li><a href="#">Hospedagem</a></li>
-                <li><a href="#">Culinária</a></li>
+                <li><a class="lista__hamburguer__link" href="#dicas">Viagem</a></li>
+                <li><a class="lista__hamburguer__link" href="#local">Localização</a></li>
             </ul>    
         </nav> 
         <div class="cabecalho__baixo">
@@ -28,18 +28,18 @@
         <h1 class="principal__titulo">
             Para viagem!
         </h1>
-        <div class="principal__dicas">
+        <div class="principal__dicas" id="dicas">
            <ul>
-                <li><a href="#"><img src="assets/culinaria.png">Culinária</a></li>
-                <li><a href="#"><img src="assets/hospedagem.png">Hospedagem</a></li>
-                <li><a href="#"><img src="assets/pontosTuristicos.png">Pontos Turísticos</a></li>
-                <li><a href="#"><img src="assets/culinaria.png">Culinária</a></li>
+                <li><a href="#"><img src="assets/culinaria.png">Culinária<span class="barra_inf"></span></a></li>
+                <li><a href="#"><img src="assets/hospedagem.png">Hospedagem<span class="barra_inf"></span></a></li>
+                <li><a href="#"><img src="assets/pontosTuristicos.png">Pontos Turísticos<span class="barra_inf"></span></a></li>
+                <li><a href="#"><img src="assets/culinaria.png">Culinária<span class="barra_inf"></span></a></li>
            </ul>
         </div>
         <h3 class="principal__titulo">
             Localização
         </h3>
-        <iframe src="https://maps.google.com/maps?q=Piracaia&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" style="width: 100%; height: 400px;">
+        <iframe id="local" src="https://maps.google.com/maps?q=Piracaia&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" style="width: 100%; height: 400px;">
         </iframe>
         
     </main>

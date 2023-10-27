@@ -3,6 +3,7 @@
 :root {
     --corDeFundo: #fdfdfd;
     --corDaFonte: #F5FCCD;
+    --corDaFontePrincipal: #000000;
     --corDaFonteHover: #78D6C6;
     --corDeFundoMenu: #419197;
     --corBotaoMenu:#ffffff;
@@ -10,12 +11,10 @@
     --corPretaTransparente: #00000085;
 }
 
-
 * {
     margin: 0;
     padding: 0;
 }
-
 
 html {
     font-size: 14px;
@@ -71,9 +70,9 @@ html {
     background-color: var(--corBotaoMenu);
     transform: translateY(8px) rotate(-45deg);
     transition: 1s;
-    width: 24px;
-    
+    width: 24px;    
 }
+
 #caixa__checkbox:checked ~ .caixa__checkbox__label > span{
     opacity: 0;
 }
@@ -86,7 +85,7 @@ html {
     background-color: var(--corDeFundoMenu);
     box-shadow: var(--corSombreamentoMenu);
     list-style-type: none;
-    height: 90vh;
+    height: 100%;
     font-size: 2rem;
     position: absolute;
     top: 0;
@@ -100,6 +99,7 @@ html {
     width: 260px;
     text-align: center;
     padding: 20px 0 20px 0; 
+    
 }
 
 .lista__hamburguer > li:hover {
@@ -145,7 +145,6 @@ html {
     text-align: center;
 }
 
-
 .principal {
     padding: 2rem;
 }
@@ -185,8 +184,24 @@ html {
 }
 
 .principal__dicas > ul > li > a {
-    
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-decoration: none;
+    color:var(--corDaFontePrincipal);
+    font-weight: 700;
 }
+
+.barra_inf {
+    display: block;
+    background-color: var(--corDeFundoMenu);
+    width: 0px;
+    height: 5px;
+    border-radius: 45px;
+}
+
+.principal__dicas > ul > li > a:hover > .barra_inf {
+    width: 100%;
+    transition: 1s;
+}
+
