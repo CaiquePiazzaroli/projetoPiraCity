@@ -1,5 +1,5 @@
 let planoDeFundo = document.querySelector(".cabecalho");
-let listaImagens = ["1.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg"];
+let listaImagens = ["1.jpg","3.jpg","4.jpg","5.jpeg"];
 let linkMenuHamburguer = document.querySelectorAll(".lista__hamburguer__link");
 let caixaCheckBox = document.querySelector("#caixa__checkbox");
 
@@ -21,3 +21,5 @@ for(var i = 0; i < linkMenuHamburguer.length; i++){
         caixaCheckBox.checked = false;
     })
 }
+
+

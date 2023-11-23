@@ -85,7 +85,7 @@ html {
     background-color: var(--corDeFundoMenu);
     box-shadow: var(--corSombreamentoMenu);
     list-style-type: none;
-    height: 100%;
+    height: 900px;
     font-size: 2rem;
     position: absolute;
     top: 0;
@@ -205,3 +205,24 @@ html {
     transition: 1s;
 }
 
+.cabecalho__fotos {
+    background-image: none;
+}
+
+.sessao__fotos {
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 5px 10px 10px; 
+}
+
+.sessao__fotos__foto {
+  margin: 2px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  
+}
+
+.sessao__fotos__descricao {
+    text-align: center;
+}
