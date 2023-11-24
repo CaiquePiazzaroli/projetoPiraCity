@@ -147,6 +147,9 @@ html {
 
 .principal {
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 .principal > h1, .principal > h3 {
@@ -224,5 +227,33 @@ html {
 }
 
 .sessao__fotos__descricao {
+    text-align: center;
+}
+
+.sessao__fotos__foto-turistico {
+  margin: 2px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.principal__titulo {
+    text-align: center;
+}
+
+#redes {
+    width: 35px;
+}
+
+
+.rodape > p {
+    margin: 10px;
+}
+
+.rodape {
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+
+.apresentacao_cidade > h3 {
     text-align: center;
 }
